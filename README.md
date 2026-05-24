@@ -26,15 +26,6 @@ A React student dashboard with dynamic filtering, responsive cards, and comprehe
 
 - The dashboard implements conditional filtering without using React state. Instead, it uses URL parameters:
 
-- const urlParams = new URLSearchParams(window.location.search);
-const currentFilter = urlParams.get('filter') || 'all';
-
-- const getFilteredStudents = () => {
-  if (currentFilter === 'active') {
-    return students.filter(student => student.isActive === true);
-  }
-  return students;
-};
 
 **Filter Buttons**
 
