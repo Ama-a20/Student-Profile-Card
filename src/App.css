@@ -1,0 +1,295 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', sans-serif;
+  background: #f1f5f9;
+  color: #1e2a3e;
+  line-height: 1.4;
+  min-height: 100vh;
+  padding: 1rem;
+  border: 4px solid #f1aaad;
+  border-radius: 2rem;
+  box-shadow: 0 8px 10px 15px #ff8f95;
+}
+
+.app-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+.header {
+  background: linear-gradient(135deg, #f1aaad 0%, #54030e 100%);
+  color: #021224;
+  padding: 2rem 2rem;
+  border-radius: 28px;
+  margin-bottom: 2rem;
+  box-shadow: 0 10px 25px -5px #4615151a;
+  text-align: left;
+}
+
+.header h1 {
+  font-size: 2rem;
+  color:#021224;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.5rem;
+}
+
+.header-stats {
+  font-size: 1.1rem;
+  opacity: 0.85;
+  display: flex;
+  gap: 3.5rem;
+  flex-wrap: wrap;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  padding-top: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.student-list-section {
+  background: whitesmoke;
+  border-radius: 28px;
+  padding: 1.75rem;
+  box-shadow: 0 4px 12px rgba(23, 8, 8, 0.1);
+}
+
+.section-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px dashed #610113;
+  color: #021224;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+
+
+@media (max-width: 900px) {
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.student-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: white;
+  border-radius: 24px;
+  overflow: hidden;
+  transition: all 0.2s ease;
+  box-shadow: 0 8px 20px rgba(25, 20, 20, 0.05);
+  border: 1px solid #f9f2f2fb;
+}
+
+.student-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 30px -12px #5d0606d2;
+}
+
+.student-card.inactive {
+  border-right: 5px solid #9b0f29;
+  border-bottom: 5px solid #9b0f29;
+  opacity: 0.85;
+}
+
+
+.card-content {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.avatar-section {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+  flex-shrink: 0;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #f9f7f7d6;
+  box-shadow: 0 4px 10px #fae5e8c4;
+}
+
+.student-name {
+  font-size: 1.35rem;
+  font-weight: 700;
+  text-align: center;
+  margin: 0.5rem 0 0.75rem;
+  color: #021224;
+  flex-shrink: 0;
+}
+
+.badge-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+  flex-shrink: 0;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.85rem;
+  border-radius: 40px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 0.3px;
+}
+
+.badge-track {
+  background: #f5b2b7;
+  color: #380202;
+}
+
+.badge-status {
+  background: #92f5a9;
+  color: #033403;
+}
+
+.badge-grade {
+  background: #f9c8d1;
+  color: #5b0505ee;
+}
+
+.stat-bar-container {
+  margin: 1rem 0;
+  margin-top: auto;  
+  flex-shrink: 0;
+}
+
+
+.stat-label {
+  font-weight: 500;
+  font-size: 0.85rem;
+  margin-bottom: 0.25rem;
+  color: #021224;
+  display: flex;
+  justify-content: space-between;
+}
+
+.stat-bar-bg {
+  background: #e2e8f0;
+  border-radius: 40px;
+  height: 10px;
+  overflow: hidden;
+}
+
+.stat-bar-fill {
+  height: 100%;
+  border-radius: 40px;
+  transition: width 0.2s ease;
+}
+
+.stat-score {
+  font-weight: 600;
+  margin-left: 0.5rem;
+}
+
+.skills-section {
+  margin-top: 1rem;
+  border-top: 1px solid #c30228;
+  padding-top: 0.85rem;
+  flex-shrink: 0;
+}
+
+
+.skills-title {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #021224;
+  margin-bottom: 0.5rem;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+}
+
+.skill-tag {
+  background: #f1f5f9;
+  padding: 0.2rem 0.7rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #021224;
+}
+
+.empty-skills {
+  color: #94a3b8;
+  font-style: italic;
+  font-size: 0.8rem;
+}
+
+.list-footer {
+  text-align: center;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px dashed #610113;
+  font-size: 0.9rem;
+  color: #021224;
+  font-weight: 500;
+}
+
+
+.filter-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.filter-btn {
+  background: white;
+  border: 2px solid #e2e8f0;
+  padding: 0.6rem 1.5rem;
+  border-radius: 40px;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: #1e293b;
+  text-decoration: none;
+}
+
+.filter-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.filter-btn.active {
+  background: #6c1818;
+  border-color: #6c1818;
+  color: white;
+}
