@@ -69,8 +69,6 @@ Copilot, for assisting greatly with debugging and understanding conditional filt
 
 #### Key Learning Outcomes
 
-**This project demonstrates:**
-
 - Conditional Filtering - Filtering arrays based on conditions
 - URL-based State Management - Using URL parameters instead of React state
 - Component Composition - Building reusable React components
@@ -82,7 +80,7 @@ Copilot, for assisting greatly with debugging and understanding conditional filt
 
 - Name: Amarachi Onyeke
 - GitHub: https://github.com/Ama-a20
-- Vercel: 
+- Vercel: student-profile-card-sigma.vercel.app
 
 
 
